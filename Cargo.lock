@@ -93,8 +93,9 @@ dependencies = [
 
 [[package]]
 name = "cursive"
-version = "0.15.1-alpha.0"
-source = "git+https://github.com/gyscos/cursive#b6444524ad71a2f8f0e1d1ae4472249df12803a7"
+version = "0.15.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7a9f12332ab2bca26979ef00cfef9a1c2e287db03b787a83d892ad9961f81374"
 dependencies = [
  "ahash",
  "cfg-if",
@@ -105,7 +106,7 @@ dependencies = [
  "libc",
  "log",
  "maplit",
- "ncurses",
+ "pancurses",
  "signal-hook",
  "term_size",
  "unicode-segmentation",
@@ -114,8 +115,9 @@ dependencies = [
 
 [[package]]
 name = "cursive_core"
-version = "0.1.1-alpha.0"
-source = "git+https://github.com/gyscos/cursive#b6444524ad71a2f8f0e1d1ae4472249df12803a7"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7fe232694c965c211d5fbd8111ae89a5939b7b169cefcac4f8b6f83dde889e10"
 dependencies = [
  "ahash",
  "chrono",
@@ -359,6 +361,29 @@ dependencies = [
 ]
 
 [[package]]
+name = "pancurses"
+version = "0.16.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d3058bc37c433096b2ac7afef1c5cdfae49ede0a4ffec3dfc1df1df0959d0ff0"
+dependencies = [
+ "libc",
+ "log",
+ "ncurses",
+ "pdcurses-sys",
+ "winreg",
+]
+
+[[package]]
+name = "pdcurses-sys"
+version = "0.7.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "084dd22796ff60f1225d4eb6329f33afaf4c85419d51d440ab6b8c6f4529166b"
+dependencies = [
+ "cc",
+ "libc",
+]
+
+[[package]]
 name = "pkg-config"
 version = "0.3.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -496,6 +521,15 @@ name = "winapi-x86_64-pc-windows-gnu"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"
+
+[[package]]
+name = "winreg"
+version = "0.5.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a27a759395c1195c4cc5cda607ef6f8f6498f64e78f7900f5de0a127a424704a"
+dependencies = [
+ "winapi",
+]
 
 [[package]]
 name = "xi-unicode"
