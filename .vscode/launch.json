@@ -8,14 +8,19 @@
 			"name": "(Windows) Launch",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/target/debug/dungeon-master.exe",
-			"preLaunchTask": "Rust: cargo build - dungeon-master",
+			"program": "${workspaceFolder}/target/debug/rusty-gm.exe",
+			"preLaunchTask": "cargo build",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
-			"environment": [],
-			"externalConsole": true,
-			"internalConsoleOptions": "openOnSessionStart"
+			"externalConsole": false,
+			"internalConsoleOptions": "openOnSessionStart",
+            "environment": [
+                {
+                    "name": "CARGO_MANIFEST_DIR",
+                    "value": "${workspaceFolder}"
+                }
+            ],
 		}
 	]
 }
