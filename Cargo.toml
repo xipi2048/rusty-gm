@@ -1,5 +1,5 @@
 [package]
-name = "dungeon-master"
+name = "rusty-gm"
 version = "0.1.0"
 authors = ["xipi2048 <raen@quantumtrip.org>"]
 edition = "2018"
@@ -8,3 +8,8 @@ edition = "2018"
 
 [dependencies]
 imgui = "0.4.0"
+clipboard = "0.5"
+glium = { version = "0.27", default-features = true }
+image = "0.23"
+imgui-glium-renderer = "0.4.0"
+imgui-winit-support = "0.4.0"

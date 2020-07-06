@@ -1,19 +1,13 @@
 use imgui::*;
 
 mod support;
+
 //#todo: write multi CI/CD for each branch
 fn main() {
     let system = support::init(file!());
-
-    #[cfg(feature = "opengl")]
-    let window_title = im_str!("Hello world (OpenGL)");
-
-    #[cfg(feature = "directx")]
-    let window_title = im_str!("Hello world (DirectX)");
-
-    system.main_loop(|_, ui| {
-        Window::new(window_title)
-            .size([300.0, 100.0], Condition::FirstUseEver)
+    system.main_loop(move |_, ui| {
+        Window::new(im_str!("Hello world"))
+            .size([300.0, 110.0], Condition::FirstUseEver)
             .build(ui, || {
                 ui.text(im_str!("Hello world!"));
                 ui.text(im_str!("こんにちは世界！"));
