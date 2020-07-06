@@ -1,5 +1,5 @@
 [package]
-name = "dungeon-master"
+name = "rusty-gm"
 version = "0.1.0"
 authors = ["xipi2048 <raen@quantumtrip.org>"]
 edition = "2018"
