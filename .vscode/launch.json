@@ -5,7 +5,19 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "(Windows) Launch",
+			"type": "gdb",
+			"request": "launch",
+			"name": "(gdb) Launch",
+			"target": "./target/debug/rusty-gm",
+			"cwd": "${workspaceRoot}",
+			"valuesFormatting": "parseText",
+			"env": {
+                "CARGO_MANIFEST_DIR": "${workspaceFolder}"
+			},
+			"preLaunchTask": "cargo build"
+		},
+		{
+			"name": "(VS dbg) Launch",
 			"type": "cppvsdbg",
 			"request": "launch",
 			"program": "${workspaceFolder}/target/debug/rusty-gm.exe",
